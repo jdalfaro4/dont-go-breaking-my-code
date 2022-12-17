@@ -48,7 +48,11 @@ function randomPassword(passwordLength) {
     }
   console.log(upperCaseConfirm, lowerCaseConfirm, numericConfirm, specialcharactersConfirm)
   console.log(userChoiceString)
- 
+  let userChoiceArray = userChoiceString.split("")
+  console.log(userChoiceArray)
+
+
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
