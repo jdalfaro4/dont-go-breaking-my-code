@@ -51,7 +51,18 @@ function randomPassword(passwordLength) {
   let userChoiceArray = userChoiceString.split("")
   console.log(userChoiceArray)
 
+  let newPassword = ""
 
+  for(let i = 0; i < passwordLength; i++) {
+    let index = Math.floor (Math.random() * userChoiceArray.length)
+    let randomCharacter = userChoiceArray[index]
+    newPassword = newPassword + randomCharacter
+  
+  }
+  console.log(newPassword)
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = newPassword;
 }
 
 // Add event listener to generate button
