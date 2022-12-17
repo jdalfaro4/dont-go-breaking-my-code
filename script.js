@@ -28,7 +28,18 @@ function generatePassword() {
 }
 
 
+function randomPassword(passwordLength) {
+  let userChoiceString = ""
+  let upperCaseConfirm = confirm ("Would you like uppercase in your password?")
 
+  let lowerCaseConfirm = confirm ("Would you like lowercase in your password?")
+
+  let numericConfirm = confirm ("Would you like numeric in your password?")
+
+  let specialcharactersConfirm = confirm ("Would you like special characters in your password?")
+ 
+
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
