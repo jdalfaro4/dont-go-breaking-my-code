@@ -14,7 +14,6 @@ function writePassword() {
 
 function generatePassword() {
   // prompt user to get criteria and store results
-  
   var passwordLength =  window.prompt('What will be your password length? Must be between 8 to 128 characters.');
   passwordLength = parseInt(passwordLength);
 
