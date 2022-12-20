@@ -2,7 +2,7 @@
 var upppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz"
 var numericCharacters = "1234567890"
-var specialCharacters = "$#!&%^*()"
+var specialCharacters = "$@#!&%^*()"
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -31,13 +31,13 @@ function randomPassword(passwordLength) {
   let userChoiceString = ""
   let upperCaseConfirm = confirm ("Would you like uppercase in your password?")
   if (upperCaseConfirm === true) {
-  userChoiceString = userChoiceString.concat(upppercaseCharacters)
+    userChoiceString = userChoiceString.concat(upppercaseCharacters)
   }
   let lowerCaseConfirm = confirm ("Would you like lowercase in your password?")
   if (lowerCaseConfirm === true) {
     userChoiceString = userChoiceString.concat(lowercaseCharacters)
     }
-  let numericConfirm = confirm ("Would you like numeric in your password?")
+  let numericConfirm = confirm ("Would you like numerical values in your password?")
   if (numericConfirm === true) {
     userChoiceString = userChoiceString.concat(numericCharacters)
     }
@@ -45,10 +45,8 @@ function randomPassword(passwordLength) {
   if (specialcharactersConfirm === true) {
     userChoiceString = userChoiceString.concat(specialCharacters)
     }
-  console.log(upperCaseConfirm, lowerCaseConfirm, numericConfirm, specialcharactersConfirm)
-  console.log(userChoiceString)
+
   let userChoiceArray = userChoiceString.split("")
-  console.log(userChoiceArray)
 
   let newPassword = ""
 
@@ -56,9 +54,8 @@ function randomPassword(passwordLength) {
     let index = Math.floor (Math.random() * userChoiceArray.length)
     let randomCharacter = userChoiceArray[index]
     newPassword = newPassword + randomCharacter
-  
   }
-  console.log(newPassword)
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = newPassword;
